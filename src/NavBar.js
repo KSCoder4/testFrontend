@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { Container, NavDropdown, Offcanvas } from 'react-bootstrap';
 import { useState } from 'react';
 import './NavBar.css';
