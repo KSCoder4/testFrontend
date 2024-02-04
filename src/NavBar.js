@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { Container, NavDropdown, Offcanvas } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavDropdown, Offcanvas } from 'react-bootstrap';
 import { useState } from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
@@ -12,14 +12,14 @@ function NavBar() {
     setShow(true);
   };
 
-	{/*const logout = () => {
-		closeSidebar();
-		api.logoutUser();
-	};*/}
+  const logout = () => {
+    closeSidebar();
+    {/*api.logoutUser();*/}
+  };
 
   return (
     <>
-      <Container className='p-4'>
+      <div className='container-fluid p-4'>
         <div className='container' onClick={showSidebar}>
           <div className='bar1'></div>
           <div className='bar2'></div>
@@ -39,10 +39,10 @@ function NavBar() {
               Space Exploration (In Progress)
             </NavDropdown.Item>
             {/*}) : null}*/}
-            <br/>
+            <br />
           </Offcanvas.Body>
         </Offcanvas>
-      </Container>
+      </div>
     </>
   );
 }

@@ -32,7 +32,7 @@ function Space() {
       <div id="space-container">
         <div id="moon">
           <h2 style={{ "color": "white" }} className="top">The Moon</h2>
-          <img height = "444" src='https://www.freeiconspng.com/thumbs/moon-png/full-moon-png-6.png'></img>
+          <img height = "444" alt='Moon img' src='https://www.freeiconspng.com/thumbs/moon-png/full-moon-png-6.png'></img>
           <span style={{ "color": "white" }} className="space-distance">(384,400 km)</span>
         </div>
         <div id="exoSphere">
@@ -56,13 +56,13 @@ function Space() {
         <div id="stratoSphere">
           <h2 style={{ "color": "white" }} className="bottom">The Stratosphere</h2>
           <span style={{ "color": "white" }} className="space-distance">(50 km)</span>
-          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/HALTEDBFAeroindia2021.png/1200px-HALTEDBFAeroindia2021.png' height="94" style={{"marginLeft":"14%","marginTop":"30%"}}></img>
+          <img alt='fighter jet' src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/HALTEDBFAeroindia2021.png/1200px-HALTEDBFAeroindia2021.png' height="94" style={{"marginLeft":"14%","marginTop":"30%"}}></img>
         </div>
         <div id="tropoSphere">
           <h2 className="bottom">The Troposphere</h2>
           <span style={{ "color": "white" }} className="space-distance">(12 km)</span>
-          <img style={{"marginLeft":"20%"}} height = "140" src="https://static.vecteezy.com/system/resources/thumbnails/026/771/790/small/cloud-with-ai-generated-free-png.png"></img>
-          <img style={{"marginLeft":"20%", "marginTop":"7%"}} height="200" src='https://rohrballoons.com/wp-content/uploads/2020/01/balloon-fleet-1-768x980.png'></img>
+          <img style={{"marginLeft":"20%"}} height = "140" alt='cloud' src="https://static.vecteezy.com/system/resources/thumbnails/026/771/790/small/cloud-with-ai-generated-free-png.png"></img>
+          <img style={{"marginLeft":"20%", "marginTop":"7%"}} height="200" alt='hot air balloon' src='https://rohrballoons.com/wp-content/uploads/2020/01/balloon-fleet-1-768x980.png'></img>
         </div>
         <div id="groundLevel">
           <h2 className="bottom">The Ground</h2>
