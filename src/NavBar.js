@@ -14,7 +14,7 @@ function NavBar() {
 
   const logout = () => {
     closeSidebar();
-    {/*api.logoutUser();*/}
+    {/*api.logoutUser();*/ }
   };
 
   return (
@@ -34,9 +34,19 @@ function NavBar() {
               Home Page
             </NavDropdown.Item>
             <br />
+            <NavDropdown.Item className='navLink' as={Link} to='/log' onClick={closeSidebar}>
+              Login
+            </NavDropdown.Item>
+            <br />
             {/*{api.checkLoggedInStatus() ? (*/}
             <NavDropdown.Item className='navLink' as={Link} to='/space' onClick={closeSidebar}>
               Space Exploration (In Progress)
+            </NavDropdown.Item>
+            {/*}) : null}*/}
+            <br />
+            {/*{api.checkLoggedInStatus() ? (*/}
+            <NavDropdown.Item className='navLink' as={Link} to='/userlist' onClick={closeSidebar}>
+              Userlist
             </NavDropdown.Item>
             {/*}) : null}*/}
             <br />
