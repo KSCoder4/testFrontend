@@ -1,4 +1,5 @@
 import Welcome from './Welcome.js'
+import UserList from './UserList.js';
 import './App.css'
 import Space from './space.js'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/space" element={ <Space/>} />
+            <Route path="/userlist" element={ <UserList/>} />
           </Routes>
         </div>
       </div>

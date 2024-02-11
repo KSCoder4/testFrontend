@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './space.css';
-
 function Space() {
   const [currentDistance, setCurrentDistance] = useState(0);
 
@@ -34,6 +33,7 @@ function Space() {
           <h2 style={{ "color": "white" }} className="top">The Moon</h2>
           <img height = "444" alt='Moon img' src={require('./moon.png')} ></img>
           <span style={{ "color": "white" }} className="space-distance">(384,400 km)</span>
+          <div className="info">Oh no... too far away from the eggs... losing.. consciousness...</div>
         </div>
         <div id="exoSphere">
           <h2 style={{ "color": "white" }} className="bottom">The Exosphere</h2>
@@ -42,9 +42,9 @@ function Space() {
           <span style={{ "color": "white" }} className="space-distance">Around Halfway to the Moon</span>
         </div>
         <div id="thermoSphere1">
-        <span style={{ "color": "white" }} className="space-distance">(700 km)</span>
-        <h5 style={{"color":"white"}} className='bottom'>(Border between Space and Earth)</h5>
-        <h2 style={{ "color": "white" }} className="bottom">Karman Line </h2>
+          <span style={{ "color": "white" }} className="space-distance">(700 km)</span>
+          <h5 style={{"color":"white"}} className='bottom'>(Border between Space and Earth)</h5>
+          <h2 style={{ "color": "white" }} className="bottom">Karman Line </h2>
         </div>
         <div id="thermoSphere2">
           <h2 style={{ "color": "white" }} className="bottom">The Thermosphere</h2>
@@ -67,6 +67,7 @@ function Space() {
         <div id="groundLevel">
           <h2 className="bottom">The Ground</h2>
           <span className="space-distance"> (0 km)</span>
+          <div className="info">I think somebody may live on this layer. Just maybe</div>
         </div>
       </div>
     </div>
