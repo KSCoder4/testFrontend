@@ -62,30 +62,35 @@ function Log() {
   });
 
   return (
-    <div className='main'>
-      <div className='login-container'>
-        <h1>Log In Page</h1>
-        <div className='row'>
-          <label htmlFor="username">Username:</label>
-          <input
-            autoFocus
-            type="text"
-            id="username"
-            placeholder='Enter Username:'
-            ref={userRef}
-          />
-        </div>
-        <div className='row'>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            placeholder='Enter Password:'
-            ref={passRef}
-          />
-        </div>
-        <div className='row'>
-          <Button onClick={handleSubmit} variant="warning">Log In</Button>
+    <div className="regularContainer">
+      <div className='main'>
+        <div className='login-container'>
+          <h1>Log In Page</h1>
+          <div className='row'>
+            <label htmlFor="username">Username:</label>
+            <input
+              autoFocus
+              type="text"
+              id="username"
+              placeholder='Enter Username:'
+              ref={userRef}
+            />
+          </div>
+          <div className='row'>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              placeholder='Enter Password:'
+              ref={passRef}
+            />
+          </div>
+          <div className='row'>
+            <Button onClick={handleSubmit} variant="warning">Log In</Button>
+          </div>
+          <div className="row">
+            <p>Portal may take up to 30 seconds to log in. Please try again if login fails, then recheck your credentials.</p>
+          </div>
         </div>
       </div>
     </div>
