@@ -18,6 +18,7 @@ h1 {
 .login-container {
   display: flex;
   flex-direction: column; 
+  width: 64%;
 }
 
 .row {

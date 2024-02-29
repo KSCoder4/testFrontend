@@ -3,6 +3,7 @@ import { NavDropdown, Offcanvas } from 'react-bootstrap';
 import { useState } from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { api } from './api.js';
 
 function NavBar() {
   const [show, setShow] = useState(false);
@@ -14,9 +15,9 @@ function NavBar() {
 
   const logout = () => {
     closeSidebar();
-    {/*api.logoutUser();*/ }
+    {api.logoutUser(); }
   };
-
+  
   return (
     <>
       <div className='container-fluid p-4'>
@@ -34,21 +35,25 @@ function NavBar() {
               Home Page
             </NavDropdown.Item>
             <br />
+            <NavDropdown.Item className='navLink' as={Link} to='/sign' onClick={closeSidebar}>
+              Sign Up Page
+            </NavDropdown.Item>
+            <br />
             <NavDropdown.Item className='navLink' as={Link} to='/log' onClick={closeSidebar}>
               Login
             </NavDropdown.Item>
             <br />
-            {/*{api.checkLoggedInStatus() ? (*/}
+            {api.checkLoggedInStatus() ? (
             <NavDropdown.Item className='navLink' as={Link} to='/space' onClick={closeSidebar}>
               Space Exploration (In Progress)
             </NavDropdown.Item>
-            {/*}) : null}*/}
+            ) : null}
             <br />
-            {/*{api.checkLoggedInStatus() ? (*/}
+            {api.checkLoggedInStatus() ? (
             <NavDropdown.Item className='navLink' as={Link} to='/userlist' onClick={closeSidebar}>
               Userlist
             </NavDropdown.Item>
-            {/*}) : null}*/}
+            ) : null}
             <br />
           </Offcanvas.Body>
         </Offcanvas>
