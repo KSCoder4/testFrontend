@@ -89,7 +89,7 @@ function Log() {
             <Button onClick={handleSubmit} variant="warning">Log In</Button>
           </div>
           <div className="row">
-            <p>Portal may take up to 30 seconds to log in. Please try again if login fails, then recheck your credentials.</p>
+            <p>Do not include extra characters or spaces. Portal may take up to 30 seconds to log in. Please try again if login fails, then recheck your credentials.</p>
           </div>
         </div>
       </div>
