@@ -10,6 +10,7 @@ import NavBar from './NavBar.js'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { api } from './api.js';
 import NotFound from './NotFound.js'
+import BobuxClicker from './BobuxClicker.js';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/sign" element={ <Sign/>} />
             <Route path="/log" element={ <Log/>} />
             <Route path="/space" element={ <ProtectedElement element ={<Space/>} />}/>
+            <Route path="/bobux" element={<ProtectedElement element={<BobuxClicker/> } />} />
             <Route path="/userlist" element={<ProtectedElement element={<UserList/> } />} />
             <Route path='*' element={<NotFound />} />
           </Routes>

@@ -44,14 +44,20 @@ function NavBar() {
             </NavDropdown.Item>
             <br />
             {api.checkLoggedInStatus() ? (
+            <NavDropdown.Item className='navLink' as={Link} to='/userlist' onClick={closeSidebar}>
+              Userlist
+            </NavDropdown.Item>
+            ) : null}
+            <br></br>
+            {api.checkLoggedInStatus() ? (
             <NavDropdown.Item className='navLink' as={Link} to='/space' onClick={closeSidebar}>
               Space Exploration (In Progress)
             </NavDropdown.Item>
             ) : null}
-            <br />
+            <br></br>
             {api.checkLoggedInStatus() ? (
-            <NavDropdown.Item className='navLink' as={Link} to='/userlist' onClick={closeSidebar}>
-              Userlist
+            <NavDropdown.Item className='navLink' as={Link} to='/bobux' onClick={closeSidebar}>
+              Bobux Clicker
             </NavDropdown.Item>
             ) : null}
             <br />
