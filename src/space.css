@@ -1,15 +1,15 @@
-
 div > .info {
     background: rgb(60, 53, 78);
     color: white;
     border-radius: 20px;
     border: 1px solid white;
-
+    margin: 0 auto; 
+    max-width: 60%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
-
-    position: absolute;
-    left: 40px;
-    top: 50%;
+    font-size: x-large;
 }
 
 .space-distance {
@@ -19,29 +19,6 @@ div > .info {
 #space-wrapper {
     position: relative;
     width: 100%;
-  }
-
-  #side-box {
-    position: fixed;
-    top: 60%; 
-    transform: translateY(-50%);
-    right: 0;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    width: 150px; 
-    z-index: 1; 
-  }
-
-
-#side-box h2 {
-    margin-bottom: 10px;
-}
-
-#side-box span {
-    font-size: 1.5em;
-    display: block;
 }
 
 #space-container {
@@ -54,88 +31,121 @@ div > .info {
     justify-content: center;
 }
 
-#space-container > div h2.top {
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 10px);
-    top: 10px;
-    text-align: center;
-}
-
-#space-container > div h2.bottom {
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    bottom: 20px;
-    text-align: center;
-}
-
-#space-container > div h5.bottom {
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    bottom: 55px;
-    text-align: center;
-}
-
+#space-container > div h2.top,
+#space-container > div h2.bottom,
+#space-container > div h5.bottom,
 #space-container > div p {
-    width: 100%;
-    height: 50%;
-    text-align: center;
+    text-align: center; 
+}
+
+#space,
+#moon,
+#exoSphere,
+#thermoSphere1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto; 
 }
 
 #space {
-    background: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg') center/cover; 
+    background-image: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg');
     height: 150vh;
 }
 
 #moon {
-    background: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg') center/cover; 
+    background-image: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg');
     height: 200vh;
 }
 
 #exoSphere {
-    border-bottom-style:dotted;
-    background: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg') center/cover;
+    border-bottom-style: dotted;
+    background-image: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg');
     height: 200vh;
-  border-color:white;
-  border-top-style:groove;
-    
+    border-color: white;
+    border-top-style: groove;
 }
 
 #thermoSphere1 {
-    background: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg') center/cover;
+    background-image: url('https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration_97886-319.jpg');
     height: 120vh;
-
 }
+
 #thermoSphere2 {
     background: linear-gradient(black, #040111);
     height: 20vh;
     border-top-style: groove;
     color: white;
-    border-color:white;
+    border-color: white;
 }
 
 #mesoSphere {
-    background: linear-gradient(#040111,#030f77);
+    background: linear-gradient(#040111, #030f77);
     height: 60vh;
-  border-top-style:dotted;
-    border-color:white;
+    border-top-style: dotted;
+    border-color: white;
 }
 
 #stratoSphere {
     background: linear-gradient(#030f77, #042bda, #004FF9);
     height: 80vh;
-  border-top-style:dotted;
+    border-top-style: dotted;
+    border-color: white
 }
 
 #tropoSphere {
     background: linear-gradient(#004FF9, lightblue);
-    height: 50vh;
-    border-top-style:dotted;
+    height: 80vh;
+    border-top-style: dotted;
+    border-color: white;
 }
 
 #groundLevel {
     background: linear-gradient(#ace721, green);
     height: 40vh;
 }
+
+@media (max-width: 768px) { 
+    div > .info {
+        max-width: 90%;
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+    }
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 4, 4, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    width: 75%;
+    height: 75%;
+    overflow: auto;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  
+  

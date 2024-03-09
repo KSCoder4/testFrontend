@@ -35,9 +35,14 @@ label {
   .main {
     width: 90%; 
     max-width: none; 
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 
   h1 {
     font-size: 1.5rem; 
+  }
+
+  .login-container {
+    width: 90%; /* Adjust width for smaller screens */
   }
 }

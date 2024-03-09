@@ -9,6 +9,7 @@ import { Navigate } from 'react-router-dom';
 import NavBar from './NavBar.js'
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { api } from './api.js';
+import NotFound from './NotFound.js'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/log" element={ <Log/>} />
             <Route path="/space" element={ <ProtectedElement element ={<Space/>} />}/>
             <Route path="/userlist" element={<ProtectedElement element={<UserList/> } />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
       </div>
